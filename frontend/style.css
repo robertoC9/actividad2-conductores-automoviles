@@ -1,0 +1,61 @@
+/* =====================================================
+   STYLE.CSS (Frontend UI)
+   - Define tipografía, márgenes y estilos de layout
+   - Estiliza botones, inputs y tabla
+   ====================================================== */
+
+/* Estilos base del body: fuente, márgenes y color de fondo */
+body {
+  font-family: Arial, sans-serif; /* Fuente legible */
+  margin: 20px; /* Espaciado alrededor */
+  background: #f4f4f4; /* Fondo gris claro */
+}
+
+/* Centrar el título principal */
+h1 {
+  text-align: center;
+}
+
+/* Contenedor vertical de botones e inputs */
+.botonera {
+  display: flex; /* Usa flexbox */
+  flex-direction: column; /* Coloca elementos en columna */
+  gap: 10px; /* Espacio entre elementos */
+  margin-bottom: 20px; /* Separación inferior */
+}
+
+/* Grupo horizontal de input + botón */
+.grupo {
+  display: flex; /* Usa flexbox */
+  gap: 10px; /* Espacio entre el input y el botón */
+}
+
+/* Estilo de todos los botones */
+button {
+  padding: 10px; /* Relleno interno */
+  background: #007bff; /* Color de fondo azul */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cursor de “mano” */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Efecto hover del botón */
+button:hover {
+  background: #0056b3; /* Azul más oscuro al pasar el mouse */
+}
+
+/* Estilo general de la tabla */
+table {
+  width: 100%; /* Tabla ocupa ancho completo */
+  border-collapse: collapse; /* Elimina doble borde */
+  margin-top: 20px; /* Separación superior */
+}
+
+/* Estilos para celdas (th/td): borde y apariencia */
+th, td {
+  border: 1px solid #ccc; /* Borde gris claro */
+  padding: 8px; /* Espaciado interno */
+  background: white; /* Fondo blanco */
+}
+

@@ -1,0 +1,78 @@
+<!-- =====================================================
+     INDEX.HTML (Frontend UI)
+     - Contiene la interfaz: botones e inputs
+     - Cada botón llama funciones definidas en app.js
+     - El contenedor <section id="resultado"> se usa para mostrar tablas o mensajes de error
+     ====================================================== -->
+
+<!DOCTYPE html>
+<!-- Define el documento como HTML5 y establece idioma -->
+<html lang="es">
+
+<!-- Metadatos del documento -->
+<head>
+  <!-- Codificación de caracteres -->
+  <meta charset="UTF-8" />
+
+  <!-- Título que aparece en la pestaña del navegador -->
+  <title>Conductores y Automóviles</title>
+
+  <!-- Hoja de estilos: controla el layout y el look & feel -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- Contenido visible en pantalla -->
+<body>
+  <!-- Título principal de la actividad -->
+  <h1>Actividad 2 — Conductores y Automóviles</h1>
+
+  <!-- Sección con la botonera e inputs -->
+  <section class="botonera">
+
+    <!-- Botón: obtiene y renderiza conductores -->
+    <button onclick="getConductores()">Conductores</button>
+
+    <!-- Botón: obtiene y renderiza automóviles -->
+    <button onclick="getAutomoviles()">Automóviles</button>
+
+    <!-- Grupo para la consulta de conductores sin auto -->
+    <div class="grupo">
+      <!-- Input numérico para edad máxima -->
+      <input id="edadInput" type="number" placeholder="Edad máxima">
+
+      <!-- Botón: llama a getConductoresSinAuto() -->
+      <button onclick="getConductoresSinAuto()">Conductores sin auto</button>
+    </div>
+
+    <!-- Botón: muestra “solitos” (dos tablas en el mismo contenedor) -->
+    <button onclick="getSolitos()">Solitos</button>
+
+    <!-- Grupo para buscar un auto por patente exacta -->
+    <div class="grupo">
+      <!-- Input de texto para la patente -->
+      <input id="patenteInput" type="text" placeholder="Patente">
+
+      <!-- Botón: llama a getAutoPorPatente() -->
+      <button onclick="getAutoPorPatente()">Buscar auto por patente</button>
+    </div>
+
+    <!-- Grupo para buscar autos por inicio de patente -->
+    <div class="grupo">
+      <!-- Input de texto para el prefijo de patente -->
+      <input id="inicioInput" type="text" placeholder="Inicial patente">
+
+      <!-- Botón: llama a getAutoPorInicio() -->
+      <button onclick="getAutoPorInicio()">Buscar autos por inicial</button>
+    </div>
+
+  </section>
+
+  <!-- Sección donde se insertan dinámicamente las tablas/errores desde app.js -->
+  <section id="resultado"></section>
+
+  <!-- Carga del script principal del frontend -->
+  <script src="app.js"></script>
+</body>
+
+</html>
+
